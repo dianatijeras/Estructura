@@ -10,6 +10,12 @@ defmodule Main do
     list_clientes_leidos = Cliente.leer_csv("clientes.csv")
     IO.inspect(list_clientes_leidos)
 
+    list_productos = [p1, p2, p3]
+    Detalle.escribir_csv(list_productos, "detalles.csv")
+
+    list_productos = Detalle.leer_csv("detalles.csv")
+    IO.inspect(list_productos)
+
 
     p1 = %Producto{nombre: "Arroz", precio: 3000.0}
     p2 = %Producto{nombre: "Frijol", precio: 4500}
